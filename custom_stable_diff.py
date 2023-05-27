@@ -334,7 +334,7 @@ def menu(img,batch, prompt, neg, width, height, steps, cfg, seed,pipe):
 def debug_menu(pipe):
     if pipe is None:
             pipe=try_load_model(model_path)
-    print("Script running in command line mode but as app, going debug mode\n\n\n")
+    print("Script running in command line mode no argument give, going custom mode\n\n\n")
     print("Welcome to the Diffusion Models CLI Debug Mode")
     print("In this mode you can set all the parameters for the model")
     print("Would you like to use the default parameters?")
@@ -378,7 +378,7 @@ def debug_menu(pipe):
 
 if __name__ == '__main__':
     debug=True
-    if (sys.argv) == 0:
+    if (len(sys.argv)) == 1:
         debug_menu(pipe=None)
     else:
         command_line()
