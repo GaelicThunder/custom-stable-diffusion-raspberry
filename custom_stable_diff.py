@@ -378,7 +378,7 @@ def debug_menu(pipe):
 
 if __name__ == '__main__':
     debug=True
-    if (sys.argv) == 1:
+    if (sys.argv) == 0:
         debug_menu(pipe=None)
     else:
         command_line()
