@@ -1,6 +1,8 @@
 # Custom Stable Diffusion for Raspberry Pi
 
-This repository contains scripts to load and generate custom stable diffusion models, optimized for a Raspberry Pi 4 with 4GB or more memory (tested on a 4Gb, Swap memory needed).
+This repository contains scripts to load and generate custom stable diffusion models, optimized for a Raspberry Pi 4 with 4GB or more memory (tested on a 4Gb, Swap memory needed). It's nothing fast, 20 min for a 256x256, but you can do some fancy stuff like this:
+
+![Epaper Screen](https://github.com/GaelicThunder/custom-stable-diffusion-raspberry/blob/main/img/epaper.jpg)
 
 The scripts facilitate the use of `.safetensors` and `.ckpt` files (such as those from Civitai) with a command line or a Raspberry Pi, since the informations for loading such models always refers to the most used tools. Before these can be used, they must be converted to a stable diffusion model using the `convert_original_stable_diffusion_to_diffusers.py` script from the HuggingFace `diffusers` repository.
 
