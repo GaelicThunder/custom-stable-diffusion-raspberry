@@ -9,6 +9,7 @@ import os
 import logging
 import random_prompt as rp
 import sys
+
 STEPS = 28
 CFG = 8
 WIDTH = 256
@@ -36,7 +37,10 @@ logging.basicConfig(level=logging.DEBUG) #! Change to logging.INFO for less verb
 @click.option("-st", "--steps", required=False, type=int, default=28)
 @click.option("-c", "--cfg", required=False, type=float, default=8)
 @click.option("-s", "--seed", required=False, type=int, default=None)
-def command_line(img,batch, prompt, neg, width, height, steps, cfg, seed):
+@click.option("-h", "--help", required=False, type=bool, default=False)
+def command_line(img,batch, prompt, neg, width, height, steps, cfg, seed,help):
+    if help:
+        print("Usage: python custom_stable_diff.py -i <image> -b <batch> -p <prompt> -n <negative_prompt> -w <width> -h <height> -st <steps> -c <cfg> -s <seed>")
     print("Please wait while the model is loaded...")
     pipe=try_load_model(model_path)
     while True:
