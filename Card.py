@@ -365,7 +365,7 @@ def debug_menu(pipe):
     elif choice == "3":
         print("You found the secret option, good job!\n Starting the secret script... Infinite loop incoming!\n\n\n")
         while True:
-            pre_txt2img(batch=1, prompt=rp.generate_prompt(), neg="(worst quality, low quality:1.4)(realistic, lip, nose, tooth, rouge, lipstick, eyeshadow:1.0), (abs, muscular, rib:1.0),(censored, mosaic censoring, bar censor, convenient censoring, pointless censoring:1.0), (dusty sunbeams:1.0), (motion lines, motion blur:1.4), (greyscale, monochrome:1.0), text, title, logo, signature,nsfw", width=256, height=256, steps=28, cfg=8, seed=np.random.randint(np.iinfo(np.int32).max),pipe=pipe)
+            pre_txt2img(batch=1, prompt=rp.generate_prompt(), neg=NEG, width=WIDTH, height=HEIGHT, steps=STEPS, cfg=CFG, seed=np.random.randint(np.iinfo(np.int32).max),pipe=pipe)
     else:
         print("Invalid choice, try again")
         debug_menu(pipe)
