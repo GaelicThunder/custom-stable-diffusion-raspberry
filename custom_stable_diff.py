@@ -19,6 +19,8 @@ PROMPT = rp.generate_prompt()
 NEG = "(worst quality, low quality:1.4), (dusty sunbeams:1.0), (motion lines, motion blur:1.4), (greyscale, monochrome:1.0), text, title, logo, signature,nsfw"
 
 model_path = os.path.join(os.path.dirname(__file__),"my_local_model_folder")
+
+#Load the custom pipeline, this bad guy lets us use the long prompt weighting like in the Web UI
 LongPromptWeightingPipeline=os.path.join(os.path.dirname(__file__),"lpw_stable_diffusion.py")
 
 logging.basicConfig(level=logging.DEBUG) #! Change to logging.INFO for less verbose logging
