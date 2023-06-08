@@ -1,4 +1,4 @@
-# Custom Stable Diffusion for Raspberry Pi
+# Custom Model Stable Diffusion for Raspberry Pi
 
 This repository contains scripts to load and generate custom stable diffusion models, optimized for a Raspberry Pi 4 with 4GB or more memory (tested on a 4Gb, Swap memory needed). It's nothing fast, 20 min for a 256x256, but you can do some fancy stuff like this:
 
