@@ -1,10 +1,13 @@
-# Custom Model Stable Diffusion for Raspberry Pi
+# Script for loading Custom Stable Diffusion models for Raspberry Pi, with DPM++ 2M Karras like and prompt weight like the WebUI
 
 This repository contains scripts to load and generate custom stable diffusion models, optimized for a Raspberry Pi 4 with 4GB or more memory (tested on a 4Gb, Swap memory needed). It's nothing fast, 20 min for a 256x256, but you can do some fancy stuff like this:
 
 ![Epaper Screen](https://github.com/GaelicThunder/custom-stable-diffusion-raspberry/blob/main/img/epaper.jpg)
 
 The scripts facilitate the use of `.safetensors` and `.ckpt` files (such as those from Civitai) with a command line or a Raspberry Pi, since the informations for loading such models always refers to the most used tools. Before these can be used, they must be converted to a stable diffusion model using the `convert_original_stable_diffusion_to_diffusers.py` script from the HuggingFace `diffusers` repository.
+The main script uses the DPMSolverMultistepScheduler which is very similar to the DPM++ 2M Karras from Automatic1111 webui.
+It also uses lpw_stable_diffusion.py which load the custom pipeline, this bad guy lets us use the long prompt weighting like in the Web UI.
+The main goal is to have a very similar generation like the one you have with the webUI without using the webUI, which is VERY complicate to do a raspi.
 
 ## Getting Started
 
